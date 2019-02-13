@@ -1,0 +1,27 @@
+{
+  "name": "rjsbanglore-app-class-version",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [
+    "class"
+  ],
+  "main": "src/index.js",
+  "dependencies": {
+    "react": "16.8.1",
+    "react-dom": "16.8.1",
+    "react-scripts": "2.1.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "PORT=5050 react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
