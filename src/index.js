@@ -2,10 +2,10 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 
 import './styles.css';
-import { User } from './User';
-import { UserSelect } from './UserSelect';
-import { PhotoList } from './PhotoList';
-import { AddPhoto } from './AddPhoto';
+import { User } from './components/User';
+import { UserSelect } from './components/UserSelect';
+import { PhotoList } from './components/PhotoList';
+import { AddPhoto } from './components/AddPhoto';
 
 function App() {
   return (

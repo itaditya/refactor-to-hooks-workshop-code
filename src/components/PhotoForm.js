@@ -1,6 +1,6 @@
 import React, { Component, createRef } from 'react';
 
-import { UserConsumer } from './context';
+import { UserConsumer } from '../context';
 
 class PhotoForm extends Component {
   inputRef = createRef();

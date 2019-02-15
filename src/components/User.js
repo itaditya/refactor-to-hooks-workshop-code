@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { UserProvider } from './context';
+import { UserProvider } from '../context';
 
 function getUserPhotos(userId) {
   return JSON.parse(localStorage.getItem(userId)) || [];

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { UserConsumer } from './context';
+import { UserConsumer } from '../context';
 
 function UserSelect() {
   return (
