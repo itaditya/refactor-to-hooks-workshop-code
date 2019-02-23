@@ -1,28 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 
-import { UserConsumer } from '../context';
+import { UserContext, UserConsumer } from '../context';
 
 function UserSelect() {
-  return (
-    <UserConsumer>
-      {({ currentUserId, setUserById }) => {
-        const handleChange = event => {
-          const userId = parseInt(event.target.value);
-          setUserById(userId);
-        };
+  const userContext = useContext(UserContext);
 
-        return (
-          <select
-            className="user-dropdown"
-            value={currentUserId}
-            onChange={handleChange}
-          >
-            <option value="0">Naruto</option>
-            <option value="1">Sasuke</option>
-          </select>
-        );
-      }}
-    </UserConsumer>
+  const handleChange = event => {
+    const userId = parseInt(event.target.value);
+    userContext.setUserById(userId);
+  };
+
+  return (
+    <select
+      className="user-dropdown"
+      value={userContext.currentUserId}
+      onChange={handleChange}
+    >
+      <option value="0">Naruto</option>
+      <option value="1">Sasuke</option>
+    </select>
   );
 }
 
