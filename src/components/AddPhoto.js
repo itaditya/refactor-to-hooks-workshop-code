@@ -1,8 +1,30 @@
-import React, { Component } from 'react';
+import React, { Component, useState } from 'react';
 
 import { PhotoForm } from './PhotoForm';
 
-class AddPhoto extends Component {
+function AddPhoto() {
+  const [formShow, setFormShow] = useState(false);
+
+  function showForm() {
+    setFormShow(true);
+  }
+
+  function hideForm() {
+    setFormShow(false);
+  }
+
+  return (
+    <li className="add-photo-card">
+      {formShow ? (
+        <PhotoForm onSubmit={hideForm} />
+      ) : (
+        <button onClick={showForm}>Add Photo</button>
+      )}
+    </li>
+  );
+}
+
+class oldAddPhoto extends Component {
   state = {
     formShow: false
   };
